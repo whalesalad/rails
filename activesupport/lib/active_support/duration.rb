@@ -83,6 +83,11 @@ module ActiveSupport
       to_i
     end
 
+    # Ruby 2.4 Compat
+    def coerce(other)
+      return self, other
+    end
+
     protected
 
       def sum(sign, time = ::Time.current) #:nodoc:
